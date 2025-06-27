@@ -1,0 +1,61 @@
+<!-- src/app/app.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold fs-4" href="/">🛒 My Store</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="/categories"
+            routerLinkActive="active fw-bold text-info"
+          >
+            Categories
+          </a>
+        </li>
+        <!-- Additional Nav Links -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="/products"
+            routerLinkActive="active fw-bold text-info"
+          >
+            Products
+          </a>
+        </li>
+      </ul>
+
+      <!-- Optional Search Form -->
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search products..."
+          aria-label="Search"
+          style="width: 250px;"
+        />
+        <button class="btn btn-outline-light" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <!-- Routed components render here -->
+  <router-outlet></router-outlet>
+</div>

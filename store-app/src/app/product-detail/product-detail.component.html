@@ -1,0 +1,29 @@
+<div class="card mt-5 shadow-sm border-0 rounded-4" *ngIf="product">
+  <!-- Optional product image -->
+  <img
+    src="https://via.placeholder.com/800x400?text={{ product.name }}"
+    class="card-img-top"
+    alt="{{ product.name }}"
+    style="object-fit: cover; height: 300px;"
+  />
+
+  <div class="card-body">
+    <h4 class="card-title text-primary fw-bold mb-2">
+      {{ product.name }}
+    </h4>
+
+    <h5 class="text-success fw-semibold mb-3">
+      ${{ product.price }}
+    </h5>
+
+    <p class="card-text text-muted" style="line-height: 1.6;">
+      {{ product.description }}
+    </p>
+
+    <div class="mt-4">
+      <a class="btn btn-outline-primary rounded-pill" routerLink="/products">
+        <i class="bi bi-arrow-left-circle"></i> Back to Products
+      </a>
+    </div>
+  </div>
+</div>
