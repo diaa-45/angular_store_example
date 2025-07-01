@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 export class CategoriesComponent {
   cats = [
     { id:1, name:'Fruits' },
-    { id:2, name:'Electronics' }
+    { id:2, name:'Electronics' },
+    { id:3, name:'Books' }
   ];
 }

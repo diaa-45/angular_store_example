@@ -21,7 +21,8 @@ export class CategoryProductsComponent implements OnInit {
     this.route.params.subscribe(params => {
       const id = +params['id'];
       this.products = this.svc.getByCategory(id);
-      this.catName = this.products.length ? this.products[0].categoryId === 1 ? 'Fruits' : 'Electronics' : '';
+      const category = this.svc.getCategory(id);
+    this.catName = category[0].name;
     });
   }
 }
